@@ -1,0 +1,39 @@
+:root {
+
+	// HEADER
+	// -----------------------------------------------
+
+	// Basic
+	--header-primary-bg-cl: var(--cl-white);
+	--header-secondary-bg-cl: var(--cl-violet-900);
+
+	--header-primary-shadow: 0 5px 10px var(--ca-violet-75-6);
+
+	// Phone
+	--header-phone-hover-cl: var(--cl-blue-500);
+
+	// Search field
+	--header-input-border-default-cl: var(--cl-violet-900);
+	--header-input-bg-cl: var(--cl-violet-900);
+	--header-input-default-cl: var(--ca-violet-50-50);
+	--header-input-hover-cl: var(--cl-violet-50);
+
+	--header-input-focus-cl: var(--cl-violet-50);
+	--header-input-focus-border-cl: var(--cl-violet-120);
+	--header-input-focus-bg-cl: var(--cl-white);
+
+	// Telephone
+	--header-telephone-default-cl: var(--cl-violet-50);
+	--header-telephone-hover-cl: var(--cl-blue-500);
+
+	// Basket
+	--header-basket-default-cl: var(--cl-violet-50);
+	--header-basket-hover-cl: var(--cl-blue-500);
+
+	// Burger
+	--header-burger-default-cl: var(--cl-violet-50);
+	--header-burger-hover-cl: var(--cl-blue-500);
+
+	// -----------------------------------------------
+	// HEADER
+}

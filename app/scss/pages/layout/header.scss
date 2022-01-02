@@ -1,0 +1,238 @@
+.header {
+	&--secondary {
+		background-color: var(--header-secondary-bg-cl);
+	}
+
+	&--primary {
+		@include media-breakpoint-down(xl) {
+			position: fixed;
+			top: 0;
+		}
+
+		position: absolute;
+		top: 50px;
+		right: 0;
+		left: 0;
+		z-index: 20;
+		background-color: var(--header-primary-bg-cl);
+		box-shadow: var(--header-primary-shadow);
+	}
+
+	&--fixed {
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+	&__social-list {
+		list-style-type: none;
+		padding-inline-start: 0;
+	}
+
+	&__social-item {
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+
+	&__social-icon {
+		display: block;
+		fill: currentColor;
+		opacity: .5;
+		transition: opacity .3s;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&__menu-list {
+		list-style-type: none;
+	}
+
+	&__menu-item {
+		&:not(:last-child) {
+			margin-right: 25px;
+		}
+	}
+
+	&__menu-item-counter {
+		bottom: 25%;
+		left: 92%;
+		border: 2px solid var(--badge-menu-border-cl);
+		border-radius: 15px;
+		background-color: var(--badge-menu-bg-cl);
+		font-size: var(--badge-text-fz-md);
+	}
+
+	&__contacts-list {
+		list-style-type: none;
+	}
+
+	&__contacts-item {
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+
+	&__contacts-icon {
+		fill: currentColor;
+	}
+
+	&__contacts-name {
+		--header-contacts-name-fz: var(--fz-sm);
+
+		margin-left: 5px;
+		color: currentColor;
+		font-size: var(--header-contacts-name-fz);
+	}
+
+	&__button {
+		--header-button-fw: var(--fw-sb);
+		--header-button-fz: var(--fz-sm);
+
+		box-shadow: var(--header-button-shadow);
+		font-size: var(--header-button-fz);
+		font-weight: var(--header-button-fw);
+	}
+
+	&__search {
+		min-width: 230px;
+	}
+
+	&__search-field {
+		--header-input-cl: var(--header-input-default-cl);
+
+		height: 35px;
+		border: 1px solid var(--header-input-border-default-cl);
+		border-radius: 20px;
+		background-color: var(--header-input-bg-cl);
+		color: var(--header-input-cl);
+		font-size: 12px;
+		letter-spacing: .01em;
+		transition: color .3s;
+
+		&:hover {
+			--header-input-cl: var(--header-input-hover-cl);
+		}
+
+		&::-ms-clear {
+			display: none;
+		}
+	}
+
+	&__search-field-icon {
+		top: 10px;
+		right: 15px;
+		fill: currentColor;
+	}
+
+	&__callback {
+		--header-telephone-cl: var(--header-telephone-default-cl);
+
+		color: var(--header-telephone-cl);
+		cursor: pointer;
+		transition: color .3s;
+
+		&:hover {
+			--header-telephone-cl: var(--header-telephone-hover-cl);
+		}
+	}
+
+	&__callback-icon {
+		fill: currentColor;
+	}
+
+	&__basket {
+		--header-basket-cl: var(--header-basket-default-cl);
+		--header-basket-fz: var(--fz-md);
+
+		color: var(--header-basket-cl);
+		font-size: var(--header-basket-fz);
+		cursor: pointer;
+		transition: color .3s;
+
+		&:hover {
+			--header-basket-cl: var(--header-basket-hover-cl);
+		}
+
+		&-icon {
+			fill: currentColor;
+		}
+
+		&-counter {
+			--badge-basket-fw: var(--fw-sb);
+			--badge-basket-fz: 12px;
+			--badge-basket-lh: var(--lh-md);
+
+			left: 97%;
+			border: 2px solid var(--badge-basket-border-cl);
+			border-radius: 50%;
+			background-color: currentColor;
+			font-size: var(--badge-basket-fz);
+			font-weight: var(--badge-basket-fw);
+			line-height: var(--badge-basket-lh);
+			letter-spacing: .05em;
+			text-transform: uppercase;
+		}
+
+		&-count {
+			color: var(--basket-cl);
+		}
+	}
+
+	&__cart {
+		@include media-breakpoint-down(xl) {
+			right: 20px;
+		}
+
+		top: 78px;
+		right: 140px;
+		z-index: 2;
+	}
+
+	&__burger {
+		--header-burger-cl: var(--header-burger-default-cl);
+
+		color: var(--header-burger-cl);
+		cursor: pointer;
+		transition: color .3s;
+
+		&:hover {
+			--header-burger-cl: var(--header-burger-hover-cl);
+		}
+	}
+
+	&__burger-icon {
+		fill: currentColor;
+	}
+}
+
+
+[type='search'] {
+	&:focus {
+		--header-input-focus-fw: var(--fw-sb);
+
+		border: 1px solid var(--header-input-focus-border-cl);
+		outline: none;
+		background-color: var(--header-input-focus-bg-cl);
+		color: var(--header-input-focus-cl);
+		font-weight: var(--header-input-focus-fw);
+
+		&::-webkit-input-placeholder {
+			--header-input-focus-cl: transparent;
+		}
+
+		+ .header__search-field-icon {
+			fill: var(--cl-violet-50);
+		}
+	}
+
+	&::-webkit-search-cancel-button {
+		width: 10px;
+		height: 10px;
+		margin-right: 35px;
+		cursor: pointer;
+		-webkit-appearance: none;
+	}
+}

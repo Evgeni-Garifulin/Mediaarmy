@@ -1,0 +1,125 @@
+// ===============================================
+// COLOR MIXINS
+// ===============================================
+
+
+@use 'sass:string';
+@use 'sass:list';
+
+
+/*
+	Create CSS custom properties from color map.
+
+	EXAMPLE:
+	$cl: (
+		blue-10: #1D253B,
+	);
+	@include get-cls($cl);
+
+	RESULT:
+	--blue-10: 29, 37, 59;
+	--cl-blue-10: rgb(var(--blue-10));
+
+	INFO: One '@each' expression were split into two to achieve
+	more readability of custom properties in a dev tools.
+*/
+@mixin get-colors($map, $prefix: 'cl') {
+	@each $prop, $val in $map {
+		$val: red($val) + ', ' + green($val) + ', ' + blue($val);
+
+		#{'--' + $prop}: string.unquote($val);
+	}
+
+	@each $prop in $map {
+		$prop: list.nth($prop, 1);
+
+		#{'--' + $prefix + '-' + $prop}: rgb(var(#{'--' + $prop}));
+	}
+}
+
+
+/*
+	Create RGBA custom property from given color.
+
+	EXAMPLE:
+	$ca-blue-10 {
+		10: .5,
+		20: .3,
+		30: .1,
+	}
+	@include get-alphas($cl, 'blue-10', $ca-blue-10)
+
+	RESULT:
+	--ca-blue-10-10: rgba(var(--blue-10), .5)
+	--ca-blue-10-20: rgba(var(--blue-10), .3)
+	--ca-blue-10-30: rgba(var(--blue-10), .1)
+*/
+@mixin get-alpha($palette, $cl, $ca, $prefix: 'ca') {
+	$i: 10;
+
+	@if (type-of($ca) == list) {
+		@each $alpha in $ca {
+			#{'--' + $prefix + '-' + $cl + '-' + $i}: rgba(var(#{'--' + $cl}), $alpha);
+
+			$i: $i + 10;
+		}
+	}
+
+	@if (type-of($ca) == map) {
+		@each $postfix, $alpha in $ca {
+			#{'--' + $prefix + '-' + $cl + '-' + $postfix}: rgba(var(#{'--' + $cl}), $alpha);
+		}
+	}
+}
+
+$cl: (
+	white: #FFFFFF,
+	black: #000000,
+	blue-50: #1B31FF,
+	blue-200: #4D76A1,
+	blue-500: #339DFF,
+	blue-550: #3B9FFC,
+	green-300: #27AE60,
+	graphite-100: #333333,
+	graphite-200: #4F4F4F,
+	graphite-750: #E5E5E5,
+	graphite-775: #EEEEF2,
+	graphite-800: #F2F2F2,
+	graphite-900: #F9F9FF,
+	graphite-915: #FAFAFE,
+	indigo-200: #3B5998,
+	red-21: #E62032,
+	violet-50: #2D3C88,
+	violet-75: #32338E,
+	violet-120: #7074C5,
+	violet-550: #BB6BD9,
+	violet-730: #CCD0E6,
+	violet-800: #E9EBFF,
+	violet-900: #F4F5FF,
+);
+
+$ca-black: (
+	5: .05,
+	9: .09,
+);
+
+$ca-blue-50: (
+	15: .15,
+);
+
+$ca-violet-50: (
+	25: .25,
+	40: .4,
+	50: .5,
+	60: .6,
+);
+
+$ca-violet-75: (
+	6: .06,
+	25: .25,
+);
+
+$ca-violet-120: (
+	20: .2,
+	30: .3,
+);

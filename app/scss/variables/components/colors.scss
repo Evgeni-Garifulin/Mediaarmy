@@ -1,0 +1,44 @@
+// ===============================================
+// Color variables
+// ===============================================
+
+@import '../mixins/_colors';
+
+:root {
+	@include get-colors($cl);
+
+	@include get-alpha($cl, 'black', $ca-black);
+	@include get-alpha($cl, 'blue-50', $ca-blue-50);
+	@include get-alpha($cl, 'violet-50', $ca-violet-50);
+	@include get-alpha($cl, 'violet-75', $ca-violet-75);
+	@include get-alpha($cl, 'violet-120', $ca-violet-120);
+
+
+	// GRADIENTS
+	// -----------------------------------------------
+
+	--gradient-fill-cl:
+		linear-gradient(
+			107.72deg,
+			#32338E 22.33%,
+			#3A338E 44.12%,
+			#43318D 66.96%,
+			#4E308D 89.81%
+		);
+
+	// -----------------------------------------------
+	// GRADIENTS
+
+
+	// ICON COLORS
+	// -----------------------------------------------
+
+	--facebook-icon-fill-cl: var(--cl-indigo-200);
+	--instagram-icon-fill-cl: var(--cl-red-21);
+	--viber-icon-fill-cl: var(--cl-violet-550);
+	--vk-icon-fill-cl: var(--cl-blue-200);
+	--whatsapp-icon-fill-cl: var(--cl-blue-500);
+
+	// -----------------------------------------------
+	// ICON COLORS
+}

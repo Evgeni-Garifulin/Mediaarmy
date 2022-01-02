@@ -1,0 +1,139 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-caret:                true !default;
+$enable-rounded:              true !default;
+$enable-shadows:              false !default;
+$enable-gradients:            false !default;
+$enable-transitions:          true !default;
+$enable-reduced-motion:       true !default;
+$enable-smooth-scroll:        true !default;
+$enable-grid-classes:         true !default;
+$enable-cssgrid:              false !default;
+$enable-button-pointers:      true !default;
+$enable-rfs:                  true !default;
+$enable-validation-icons:     true !default;
+$enable-negative-margins:     false !default;
+$enable-deprecation-messages: true !default;
+$enable-important-utilities:  true !default;
+
+// Prefix for :root CSS variables
+
+$variable-prefix:             bs- !default;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+// scss-docs-start spacer-variables-maps
+$spacers-5: (
+	0: 0,
+	2: 2px,
+	4: 4px,
+	5: 5px,
+	6: 6px,
+	8: 8px,
+	10: 10px,
+	12: 12px,
+	14: 14px,
+	15: 15px,
+	16: 16px,
+	18: 18px,
+	20: 20px,
+	22: 22px,
+	24: 24px,
+	25: 25px,
+	26: 26px,
+	28: 28px,
+	30: 30px,
+	32: 32px,
+	34: 34px,
+	35: 35px,
+	36: 36px,
+	38: 38px,
+	40: 40px,
+	42: 42px,
+	44: 44px,
+	45: 45px,
+	46: 46px,
+	48: 48px,
+	50: 50px,
+	60: 60px,
+	65: 65px,
+	90: 90px,
+	110: 110px,
+) !default;
+$negative-spacers-5: if($enable-negative-margins, negativify-map($spacers-5), null) !default;
+
+// scss-docs-end spacer-variables-maps
+
+// Position
+//
+// Define the edge positioning anchors of the position utilities.
+
+// scss-docs-start position-map
+$position-values: (
+	0: 0,
+	50p: 50%,
+	100p: 100%
+) !default;
+
+// scss-docs-end position-map
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px
+) !default;
+
+// scss-docs-end grid-breakpoints
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           1.5rem !default;
+$grid-row-columns:            6 !default;
+
+$gutters: $spacers-5 !default;
+
+// Container padding
+
+$container-padding-x: $grid-gutter-width * .5 !default;
+
+// stylelint-disable function-disallowed-list
+// scss-docs-start aspect-ratios
+$aspect-ratios: (
+	'1x1': 100%,
+	'4x3': calc(3 / 4 * 100%),
+	'16x9': calc(9 / 16 * 100%),
+	'21x9': calc(9 / 21 * 100%)
+) !default;
+
+// scss-docs-end aspect-ratios
+// stylelint-enable function-disallowed-list
+// Code
+
+$kbd-padding-y:                     .2rem !default;
+$kbd-padding-x:                     .4rem !default;
+
+$pre-color:                         null !default;

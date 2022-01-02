@@ -1,0 +1,33 @@
+// ===============================================
+// Main root of project styles
+// ===============================================
+
+@import './variables/variables';
+@import './utilities/grid/bootstrap-grid';
+
+
+// SECTIONS
+// -----------------------------------------------
+
+// Layout
+@import './pages/layout/layout';
+@import './pages/layout/header';
+@import './pages/layout/footer';
+
+// Index
+
+// Catalog
+
+// Product page
+
+// -----------------------------------------------
+// SECTIONS
+
+
+// COMPONENTS
+// -----------------------------------------------
+
+@import './components/fonts';
+
+// -----------------------------------------------
+// COMPONENTS

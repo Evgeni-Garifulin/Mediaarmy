@@ -1,0 +1,261 @@
+@import '../../utilities/grid/variables';
+@import '../../utilities/grid/mixins/breakpoints';
+
+
+:root {
+
+	// FONT FAMILY
+	// -----------------------------------------------
+
+	--ff-montserrat: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
+
+	// -----------------------------------------------
+	// FONT FAMILY
+
+
+	// FONT WEIGHT
+	// -----------------------------------------------
+
+	--fw-n: 500;
+	--fw-sb: 600;
+	--fw-b: 700;
+
+	--h1-fw: 600;
+	--h2-fw: 600;
+	--h3-fw: 600;
+	--h4-fw: 600;
+
+	--display-1-fw: 600;
+
+	// -----------------------------------------------
+	// FONT WEIGHT
+
+
+	// FONT SIZE
+	// -----------------------------------------------
+
+	--fz-xs: 10px;
+	--fz-sm: 13px;
+	--fz-md: 14px;
+	--fz-lg: 16px;
+	--fz-xl: 20px;
+	--fz-xxl: 36px;
+
+	--h1-fz: 24px;
+	--h2-fz: 16px;
+	--h3-fz: 24px;
+	--h4-fz: 20px;
+
+	--display-1-fz: 36px;
+
+	--link-sm-fz: var(--fz-sm);
+	// -----------------------------------------------
+	// FONT SIZE
+
+
+	// LINE HEIGHT
+	// -----------------------------------------------
+
+	--lh-md: 1;
+	--lh-lg: 1.2;
+	--lh-xl: 1.5;
+
+	--h1-lh: 1;
+	--h2-lh: 1.2;
+	--h3-lh: 1;
+	--h4-lh: 1;
+
+	--display-1-lh: 1.2;
+
+	// -----------------------------------------------
+	// LINE HEIGHT
+
+
+	// TEXT COLORS
+	// -----------------------------------------------
+
+	--text-primary-cl: var(--cl-violet-50);
+	--text-secondary-cl: var(--cl-graphite-200);
+	--text-dark-cl: var(--cl-graphite-100);
+	--text-light-cl: var(--cl-blue-500);
+
+	// -----------------------------------------------
+	// TEXT COLORS
+
+
+	// LINK COLORS
+	// -----------------------------------------------
+
+	--link-primary-default-cl: var(--ca-violet-50-60);
+	--link-primary-hover-cl: var(--cl-violet-50);
+	--link-secondary-default-cl: var(--cl-graphite-100);
+	--link-secondary-hover-cl: var(--cl-violet-50);
+	--link-light-default-cl: var(--cl-violet-50);
+	--link-light-hover-cl: var(--cl-blue-500);
+
+	// -----------------------------------------------
+	// LINK  COLORS
+}
+
+// TEXT COLOR
+// -----------------------------------------------
+
+$text-colors: primary, secondary, dark, light;
+
+@each $text-color in $text-colors {
+	.text-#{$text-color} {
+		color: var(--text-#{$text-color}-cl);
+	}
+}
+
+// -----------------------------------------------
+// TEXT COLOR
+
+
+// HEADINGS
+// -----------------------------------------------
+
+@for $i from 1 through 4 {
+	h#{$i} {
+		font-size: var(--h#{$i}-fz);
+		font-weight: var(--h#{$i}-fw);
+		line-height: var(--h#{$i}-lh);
+	}
+}
+
+// -----------------------------------------------
+// HEADINGS
+
+
+// DISPLAYS
+// -----------------------------------------------
+
+@for $i from 1 through 2 {
+	.display-#{$i} {
+		font-size: var(--display-#{$i}-fz);
+		font-weight: var(--display-#{$i}-fw);
+		line-height: var(--display-#{$i}-lh);
+	}
+}
+
+// -----------------------------------------------
+// DISPLAYS
+
+
+// LINK STYLES
+// -----------------------------------------------
+
+// Medium size
+$link-colors: primary, secondary;
+
+@each $link-color in $link-colors {
+	.link-#{$link-color}-sm {
+		--link-#{$link-color}-cl: var(--link-#{$link-color}-default-cl);
+
+		color: var(--link-#{$link-color}-cl);
+		font-size: var(--link-sm-fz);
+		text-decoration: none;
+		transition: color .3s;
+
+		&:hover {
+			--link-#{$link-color}-cl: var(--link-#{$link-color}-hover-cl);
+		}
+	}
+}
+
+// Small size
+@each $link-color in $link-colors {
+	.link-#{$link-color}-md {
+		--link-#{$link-color}-cl: var(--link-#{$link-color}-default-cl);
+
+		color: var(--link-#{$link-color}-cl);
+		text-decoration: none;
+		transition: color .3s;
+
+		&:hover {
+			--link-#{$link-color}-cl: var(--link-#{$link-color}-hover-cl);
+		}
+	}
+}
+
+// Underline medium size
+@each $link-color in $link-colors {
+	.link-#{$link-color}-sm--underline {
+		--link-#{$link-color}-cl: var(--link-#{$link-color}-default-cl);
+
+		color: var(--link-#{$link-color}-cl);
+		text-decoration: underline;
+		transition: color .3s;
+
+		&:hover {
+			--link-#{$link-color}-cl: var(--link-#{$link-color}-hover-cl);
+		}
+	}
+}
+
+// Underline small size
+@each $link-color in $link-colors {
+	.link-#{$link-color}-md--underline {
+		--link-#{$link-color}-cl: var(--link-#{$link-color}-default-cl);
+
+		color: var(--link-#{$link-color}-cl);
+		font-size: var(--link-sm-fz);
+		text-decoration: underline;
+		transition: color .3s;
+
+		&:hover {
+			--link-#{$link-color}-cl: var(--link-#{$link-color}-hover-cl);
+		}
+	}
+}
+
+// light
+.link-light-md {
+	--link-light-cl: var(--link-light-default-cl);
+
+	color: var(--link-light-cl);
+	font-weight: var(--fw-b);
+	text-decoration: none;
+	transition: color .3s;
+
+	&:hover {
+		--link-light-cl: var(--link-light-hover-cl);
+	}
+}
+
+.link-light-sm {
+	--link-light-cl: var(--link-light-default-cl);
+
+	color: var(--link-light-cl);
+	font-size: var(--link-sm-fz);
+	text-decoration: none;
+	transition: color .3s;
+
+	&:hover {
+		--link-light-cl: var(--link-light-hover-cl);
+	}
+}
+
+// // -----------------------------------------------
+// // LINK STYLES
+// @each $breakpoint in map-keys($grid-breakpoints) {
+// 	@include media-breakpoint-up($breakpoint) {
+// 		$prefix: breakpoint-prefix($breakpoint, $grid-breakpoints);
+
+// 		$i: $h-start;
+
+// 		@each $key in $text-sizes {
+// 			.text-#{$prefix}-#{key} {
+// 				@include text-component($key);
+// 			}
+// 		}
+
+// 		@while $i <= $h-end {
+// 			.#{prefix}h#{i} {
+// 				@include text-component(h#{$i});
+// 			}
+
+// 			$i: $i + 1;
+// 		}
+// 	}
+// }

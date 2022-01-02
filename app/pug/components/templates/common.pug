@@ -1,0 +1,39 @@
+//- Основной файл шаблона страницы
+
+//- Переменные для разметки страницы
+block variables
+	-
+		let pageTitle =	'TanCity';
+
+//- Разметка страницы
+
+doctype html
+html(lang='ru')
+
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+
+		title= pageTitle
+
+		link(rel='stylesheet' href='css/normalize.css')
+		link(rel='stylesheet' href='css/swiper-bundle.css')
+		link(rel='stylesheet' href='css/style.css')
+		script(src='libs/svg4everybody/svg4everybody.min.js')
+		script.
+			svg4everybody({
+				polyfill: true
+			});
+
+		block styles
+
+	body
+
+		include ./header
+
+		block content
+
+		include ./footer
+
+		script(src='/js/index.js')
+		block scripts

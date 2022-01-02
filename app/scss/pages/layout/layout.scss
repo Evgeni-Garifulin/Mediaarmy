@@ -1,0 +1,54 @@
+/* stylelint-disable scss/selector-nest-combinators */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	background-color: var(--body-bg-cl);
+	color: var(--body-cl);
+	font-family: var(--ff-montserrat);
+	font-size: var(--body-fz);
+	line-height: var(--body-lh);
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.page-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	background-color: var(--ca-violet-120-20);
+}
+
+.h0 {
+	color: var(--heading-primary-cl);
+	font-size: var(--h0-fz);
+	font-weight: var(--h0-fw);
+	line-height: var(--h0-lh);
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.section {
+	margin: 30px 0 60px;
+
+	&__title {
+		margin-bottom: 30px;
+	}
+}
