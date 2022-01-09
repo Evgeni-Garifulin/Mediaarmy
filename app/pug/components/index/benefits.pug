@@ -1,0 +1,17 @@
+include ../mixins/picture
+
+section.benefits
+	.container--benefits
+		.benefits__content
+			.benefits__article
+				.benefits__top
+					h2.benefits__title У нас уютно
+					img.max-w-100p.h-100p.benefits__img(src='/img/index/benefits/leaflet.svg' width='170' height='55' alt='Табачный лист')
+				ul.benefits__description
+					li.benefits__description-item Шикарный вид на&nbsp;город с&nbsp;50-го этажа БЦ&nbsp;&laquo;Высоцкий&raquo;
+					li.benefits__description-item Авторские миксы, которые меняются каждый месяц и&nbsp;способны удовлетворить каждого требовательного гостя
+					li.benefits__description-item Уникальная атмосфера уединения и&nbsp;комфорта
+					li.benefits__description-item Персонал&nbsp;&mdash; подготовленные мастера своего дела
+	div(class='row g-0 benefits__bg')
+		div(class='col-12 xl:col-8 benefits__bg-side')
+			+picture-class-w100p('benefits__bg-img', 'benefits/bg', 'Интерьер бара', '660', '1090')

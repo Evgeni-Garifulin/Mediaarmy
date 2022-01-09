@@ -1,0 +1,23 @@
+:root {
+
+	// Panel
+	--menu-panel-border-cl: var(--cl-graphite-350);
+
+	// Choose button
+	--menu-choose-defaul-cl: var(--cl-graphite-50);
+	--menu-choose-hover-cl: var(--cl-graphite-435);
+	--menu-choose-hover-bg-cl: var(--cl-purple-100);
+
+	// Menu card
+	--menu-card-border-cl: var(--cl-graphite-350);
+
+	// Card price
+	--menu-card-price-cl: var(--cl-purple-100);
+
+	// Swiper
+	--menu-swiper-border-cl: var(--cl-graphite-150);
+	--menu-swiper-border-disabled-cl: var(--cl-graphite-350);
+	--menu-swiper-fill-default-cl: var(--cl-graphite-150);
+	--menu-swiper-fill-hover-cl: var(--cl-graphite-50);
+	--menu-swiper-fill-disabled-cl: var(--cl-graphite-370);
+}

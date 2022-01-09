@@ -108,9 +108,12 @@ $utilities:
 			)
 		),
 		'max-width': (
+			responsive: true,
 			property: max-width,
 			class: max-w,
-			values: (100p: 100%)
+			values: (
+				100p: 100%,
+				none: none,)
 		),
 		'viewport-width': (
 			property: width,

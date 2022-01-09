@@ -1,39 +1,34 @@
 :root {
 
-	// HEADER
-	// -----------------------------------------------
+	// Logo
+	--header-logo-box-bg-cl: var(--cl-purple-100);
+	--header-logo-default-cl: var(--cl-graphite-450);
+	--header-logo-hover-cl: var(--cl-white);
 
-	// Basic
-	--header-primary-bg-cl: var(--cl-white);
-	--header-secondary-bg-cl: var(--cl-violet-900);
+	// Social
+	--header-social-default-cl: var(--cl-graphite-450);
+	--header-social-hover-cl: var(--cl-white);
 
-	--header-primary-shadow: 0 5px 10px var(--ca-violet-75-6);
+	// Menu
+	--header-menu-default-cl: var(--cl-graphite-450);
+	--header-menu-hover-cl: var(--cl-white);
 
-	// Phone
-	--header-phone-hover-cl: var(--cl-blue-500);
+	// Menu mobile
+	--header-menu-mobile-bg-cl: var(--cl-graphite-80);
 
-	// Search field
-	--header-input-border-default-cl: var(--cl-violet-900);
-	--header-input-bg-cl: var(--cl-violet-900);
-	--header-input-default-cl: var(--ca-violet-50-50);
-	--header-input-hover-cl: var(--cl-violet-50);
+	// Burgee
+	--header-mobile-default-cl: var(--cl-graphite-400);
+	--header-mobile-hover-cl: var(--cl-white);
 
-	--header-input-focus-cl: var(--cl-violet-50);
-	--header-input-focus-border-cl: var(--cl-violet-120);
-	--header-input-focus-bg-cl: var(--cl-white);
+	// Content
+	--header-content-figure-border-cl: var(--cl-purple-100);
+	--header-content-title-cl: var(--cl-white);
 
-	// Telephone
-	--header-telephone-default-cl: var(--cl-violet-50);
-	--header-telephone-hover-cl: var(--cl-blue-500);
+	// Bottom
+	--header-bottom-border-cl: var(--cl-graphite-100);
 
-	// Basket
-	--header-basket-default-cl: var(--cl-violet-50);
-	--header-basket-hover-cl: var(--cl-blue-500);
-
-	// Burger
-	--header-burger-default-cl: var(--cl-violet-50);
-	--header-burger-hover-cl: var(--cl-blue-500);
-
-	// -----------------------------------------------
-	// HEADER
+	// Column
+	--header-column-link-default-cl: var(--cl-graphite-450);
+	--header-column-link-hover-cl: var(--cl-white);
+	--header-column-cl: var(--cl-graphite-400);
 }

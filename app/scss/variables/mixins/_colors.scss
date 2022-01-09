@@ -75,51 +75,31 @@
 $cl: (
 	white: #FFFFFF,
 	black: #000000,
-	blue-50: #1B31FF,
-	blue-200: #4D76A1,
-	blue-500: #339DFF,
-	blue-550: #3B9FFC,
-	green-300: #27AE60,
-	graphite-100: #333333,
-	graphite-200: #4F4F4F,
-	graphite-750: #E5E5E5,
-	graphite-775: #EEEEF2,
-	graphite-800: #F2F2F2,
-	graphite-900: #F9F9FF,
-	graphite-915: #FAFAFE,
-	indigo-200: #3B5998,
-	red-21: #E62032,
-	violet-50: #2D3C88,
-	violet-75: #32338E,
-	violet-120: #7074C5,
-	violet-550: #BB6BD9,
-	violet-730: #CCD0E6,
-	violet-800: #E9EBFF,
-	violet-900: #F4F5FF,
+	graphite-50: #2B2D33,
+	graphite-75: #303331,
+	graphite-80: #30333B,
+	graphite-100: #4D515E,
+	graphite-150: #585E67,
+	graphite-200: #6E7483,
+	graphite-225: #686D7C,
+	graphite-250: #777B8A,
+	graphite-300: #AAADB7,
+	graphite-330: #AEB2BA,
+	graphite-350: #BDC4CF,
+	graphite-370: #8E9199,
+	graphite-400: #C8CDD8,
+	graphite-415: #CFD2D9,
+	graphite-425: #D5D9E3,
+	graphite-435: #E3E5EA,
+	graphite-450: #E3E7EF,
+	purple-100: #6C525B,
+	purple-200: #846A73,
+);
+
+$ca-graphite-80: (
+	95: .95,
 );
 
 $ca-black: (
-	5: .05,
-	9: .09,
-);
-
-$ca-blue-50: (
-	15: .15,
-);
-
-$ca-violet-50: (
-	25: .25,
-	40: .4,
-	50: .5,
 	60: .6,
-);
-
-$ca-violet-75: (
-	6: .06,
-	25: .25,
-);
-
-$ca-violet-120: (
-	20: .2,
-	30: .3,
 );

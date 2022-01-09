@@ -5,7 +5,6 @@
 @import './variables/variables';
 @import './utilities/grid/bootstrap-grid';
 
-
 // SECTIONS
 // -----------------------------------------------
 
@@ -15,10 +14,13 @@
 @import './pages/layout/footer';
 
 // Index
+@import './pages/index/info';
+@import './pages/index/interior';
+@import './pages/index/menu';
+@import './pages/index/benefits';
+@import './pages/index/news';
+@import './pages/index/partners';
 
-// Catalog
-
-// Product page
 
 // -----------------------------------------------
 // SECTIONS
@@ -28,6 +30,7 @@
 // -----------------------------------------------
 
 @import './components/fonts';
+@import './components/wysiwyg';
 
 // -----------------------------------------------
 // COMPONENTS

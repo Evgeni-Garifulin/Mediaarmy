@@ -1,0 +1,27 @@
+.wysiwyg {
+	h4 {
+		--wysiwyg-h4-fz: var(--h4-fz);
+
+		margin: 0;
+		font-size: var(--wysiwyg-h4-fz);
+	}
+
+	h5 {
+		--wysiwyg-h5-fz: var(--h5-fz);
+
+		margin: 0;
+		font-size: var(--wysiwyg-h5-fz);
+	}
+
+	.price {
+		color: var(--menu-card-price-cl);
+		font-weight: var(--fw-b);
+	}
+
+	p {
+		--wysiwyg-p-fz: var(--fz-md);
+
+		margin-top: 10px;
+		font-size: var(--wysiwyg-p-fz);
+	}
+}

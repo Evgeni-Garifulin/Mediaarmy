@@ -1,0 +1,46 @@
+include ../mixins/picture
+
+section.news
+	.container
+		.news__inner
+			h2.news__title Новости
+			.news__swiper-buttons
+				button.swiper-button-prev.news__swiper-button.news__swiper-button--prev
+					+svg('button-prev-icon', '19', '22', 'Предыдущий слайд', 'left-arrow')
+				button.swiper-button-next.news__swiper-button.news__swiper-button--next
+					+svg('button-next-icon', '19', '22', 'Следующий слайд', 'right-arrow')
+	.container.container--swiper-md
+		.swiper.news__swiper
+			.swiper-wrapper
+				.swiper-slide.news__swiper-slide
+					article.news__article
+						+picture('news__article-img', 'news/sofa', 'Диван', '265', '380')
+						.news__article-date 8 апреля
+						h3.news__article-title Наш курительный клуб ежедневно работает с&nbsp;16:00
+				.swiper-slide.news__swiper-slide
+					article.news__article
+						+picture('news__article-img', 'news/bottles', 'Бар', '265', '380')
+						.news__article-date 24 марта
+						h3.news__article-title Дорогие гости, по&nbsp;выходным наш курительный клуб работает до&nbsp;4&nbsp;утра
+				.swiper-slide.news__swiper-slide
+					article.news__article
+						+picture('news__article-img', 'news/chivas', 'Виски', '265', '380')
+						.news__article-date 12 марта
+						h3.news__article-title Готовимся к&nbsp;вечеру с&nbsp;сигарами Davidoff
+				.swiper-slide.news__swiper-slide
+					article.swiper-slide.news__swiper-slide.news__article
+						+picture('news__article-img', 'news/sofa', 'Диван', '265', '380')
+						.news__article-date 8 апреля
+						h3.news__article-title Наш курительный клуб ежедневно работает с&nbsp;16:00
+				.swiper-slide.news__swiper-slide
+					article.news__article
+						+picture('news__article-img', 'news/bottles', 'Бар', '265', '380')
+						.news__article-date 24 марта
+						h3.news__article-title Дорогие гости, по&nbsp;выходным наш курительный клуб работает до&nbsp;4&nbsp;утра
+				.swiper-slide.news__swiper-slide
+					article.news__article
+						+picture('news__article-img', 'news/chivas', 'Виски', '265', '380')
+						.news__article-date 12 марта
+						h3.news__article-title Готовимся к&nbsp;вечеру с&nbsp;сигарами Davidoff
+
+

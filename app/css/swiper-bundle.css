@@ -28,7 +28,6 @@
 	z-index: 1;
 	margin-right: auto;
 	margin-left: auto;
-	padding: 15px;
 	overflow: hidden;
 	list-style: none;
 }
@@ -44,6 +43,7 @@
 	box-sizing: content-box;
 	width: 100%;
 	height: 100%;
+	padding-right: 15px;
 	transition-property: transform;
 }
 
@@ -63,8 +63,10 @@
 .swiper-slide {
 	position: relative;
 	flex-shrink: 0;
-	width: 100%;
+
+	/* width: 100%; */
 	height: 100%;
+	overflow: hidden;
 	transition-property: transform;
 }
 
@@ -219,34 +221,29 @@
 
 .swiper-button-prev,
 .swiper-button-next {
-	position: absolute;
-	top: 150px;
-	z-index: 10;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 50px;
-	height: 50px;
+	width: 35px;
+	height: 45px;
 	margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
-	border-radius: 50%;
-	background-color: var(--swiper-button-bg-cl);
-	box-shadow: var(--swiper-button-shadow);
-	fill: var(--swiper-button-default-cl);
+	background-color: transparent;
 	cursor: pointer;
 	transition: all.3s ease-in-out;
 }
 
-.swiper-button-prev:hover,
+/* .swiper-button-prev:hover,
 .swiper-button-next:hover {
-	fill: var(--swiper-button-hover-cl);
-}
+
+} */
 
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
 	z-index: 1;
-	background-color: var(--swiper-button-disabled-bg-cl);
+	border: 1px solid var(--interior-swiper-border-disabled-cl);
+	background-color: transparent;
 	box-shadow: none;
-	fill: var(--swiper-button-disabled-cl);
+	fill: var(--interior-swiper-fill-disabled-cl);
 	cursor: auto;
 	pointer-events: auto;
 }

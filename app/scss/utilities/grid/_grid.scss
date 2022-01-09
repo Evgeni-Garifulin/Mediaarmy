@@ -9,27 +9,6 @@
 		> * {
 			@include make-col-ready;
 		}
-
-		[class*='col-'] {
-			max-width: 100%;
-			margin: 0;
-			padding-right: 10px;
-			padding-left: 10px;
-		}
-
-		&--lg {
-			> [class*='col-'] {
-				padding-right: 15px;
-				padding-left: 15px;
-			}
-		}
-
-		&--xl {
-			> [class*='col-'] {
-				padding-right: 25px;
-				padding-left: 25px;
-			}
-		}
 	}
 }
 

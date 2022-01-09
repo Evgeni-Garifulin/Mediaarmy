@@ -1,0 +1,87 @@
+.info {
+	margin-bottom: 65px;
+
+	&__inner {
+		position: relative;
+	}
+
+	&__title {
+		@include media-breakpoint-down(lg) {
+			--info-title-fz: var(--h2-md-fz);
+		}
+
+		@include media-breakpoint-down(md) {
+			--info-title-fz: var(--h2-sm-fz);
+
+			text-align: center;
+		}
+		--info-title-fz: var(--h2-fz);
+		--info-title-fw: var(--h2-fw);
+		--info-title-ff: var(--ff-merriweather);
+
+		margin-bottom: 35px;
+		font-family: var(--info-title-ff);
+		font-size: var(--info-title-fz);
+		font-weight: var(--info-title-fw);
+	}
+
+	&__description {
+		@include media-breakpoint-down(xl) {
+			max-width: none;
+			margin-bottom: 70px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			margin-bottom: 40px;
+		}
+
+		@include media-breakpoint-down(md) {
+			margin-bottom: 30px;
+		}
+
+		max-width: 610px;
+		margin-bottom: 100px;
+	}
+
+	&__img {
+		@include media-breakpoint-down(xl) {
+			position: relative;
+			top: 0;
+		}
+
+		@include media-breakpoint-down(lg) {
+			width: 50%;
+			height: 50%;
+		}
+
+		position: absolute;
+		top: -40px;
+		right: 0;
+		width: 425px;
+		height: 325px;
+	}
+
+	&__column-line {
+		margin-bottom: 40px;
+		border: 1px solid var(--column-line-cl);
+	}
+
+	&__column-title {
+		--info-column-title-fz: var(--h3-fz);
+		--info-column-title-fw: var(--h3-fw);
+
+		margin-bottom: 30px;
+		font-size: var(--info-column-title-fz);
+		font-weight: var(--info-column-title-fw);
+	}
+
+	&__column-text {
+		@include media-breakpoint-down(md) {
+			margin-bottom: 30px;
+		}
+
+		--info-column-text-fz: var(--fz-sm);
+
+		font-size: var(--info-column-text-fz);
+	}
+}

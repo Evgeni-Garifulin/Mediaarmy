@@ -1,0 +1,159 @@
+.menu {
+	@include media-breakpoint-down(lg) {
+		margin-bottom: 260px;
+	}
+
+	@include media-breakpoint-down(sm) {
+		margin-bottom: 50px;
+	}
+
+	margin-bottom: 120px;
+
+	&__inner {
+		position: relative;
+	}
+
+	&__title {
+		@include media-breakpoint-down(lg) {
+			--menu-title-fz: var(--h2-md-fz);
+		}
+
+		--menu-title-fz: var(--h2-fz);
+		--menu-title-fw: var(--h2-fw);
+		--menu-title-ff: var(--ff-merriweather);
+
+		margin-bottom: 45px;
+		font-family: var(--menu-title-ff);
+		font-size: var(--menu-title-fz);
+		font-weight: var(--menu-title-fw);
+	}
+
+	&__img {
+		@include media-breakpoint-down(xl) {
+			width: 160px;
+			height: 100px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			width: 135px;
+			height: 120px;
+		}
+
+		@include media-breakpoint-down(md) {
+			top: -120px;
+			width: 130px;
+			height: 115px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			width: 124px;
+			height: 110px;
+		}
+
+		position: absolute;
+		top: -30px;
+		right: 0;
+	}
+
+	&__panel {
+		@include media-breakpoint-down(md) {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+			margin-bottom: 20px;
+			border-bottom: none;
+		}
+
+		margin-bottom: 50px;
+		border-bottom: 1px solid var(--menu-panel-border-cl);
+	}
+
+	&__panel-buttons {
+		@include media-breakpoint-down(md) {
+			flex-direction: column;
+		}
+
+		display: flex;
+	}
+
+	&__swiper-buttons {
+		@include media-breakpoint-down(md) {
+			display: flex;
+		}
+
+		display: none;
+	}
+
+	&__swiper-button {
+		margin-top: 0;
+		border: 1px solid var(--menu-swiper-border-cl);
+		background-color: transparent;
+		fill: var(--menu-swiper-fill-default-cl);
+
+		&--prev {
+			margin-right: 10px;
+		}
+
+		&:hover {
+			fill: var(--menu-swiper-fill-hover-cl);
+		}
+
+		&.swiper-button-disabled {
+			border: 1px solid var(--menu-swiper-border-disabled-cl);
+			fill: var(--menu-swiper-fill-disabled-cl);
+		}
+	}
+
+
+	&__choose {
+		@include media-breakpoint-down(lg) {
+			--menu-choose-fz: var(--fz-lg);
+		}
+
+		--menu-choose-cl: var(--menu-choose-defaul-cl);
+		--menu-choose-fz: var(--fz-xl);
+		--menu-choose-fw: var(--fw-b);
+
+		padding: 20px 20px 15px;
+		color: var(--menu-choose-cl);
+		font-size: var(--menu-choose-fz);
+		font-weight: var(--menu-choose-fw);
+		cursor: pointer;
+		transition: all .3s ease;
+
+		&--active {
+			--menu-choose-cl: var(--menu-choose-hover-cl);
+
+			background-color: var(--menu-choose-hover-bg-cl);
+		}
+
+		&:hover {
+			--menu-choose-cl: var(--menu-choose-hover-cl);
+
+			background-color: var(--menu-choose-hover-bg-cl);
+		}
+
+		&:active {
+			padding: 23px 20px 12px;
+		}
+	}
+
+	&__card {
+		@include media-breakpoint-down(xl) {
+			padding: 45px 15px;
+		}
+
+		@include media-breakpoint-down(md) {
+			max-width: 236px;
+		}
+
+		padding: 45px 30px;
+		border: 4px solid var(--menu-card-border-cl);
+	}
+
+	&__card-head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}

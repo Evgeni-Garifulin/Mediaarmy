@@ -1,127 +1,151 @@
 .footer {
-	background-color: var(--footer-bg-cl);
-
-	&__logo-description {
-		--footer-logo-description-fz: 12px;
-		--footer-logo-description-lh: var(--lh-md);
-
-		margin-top: 4px;
-		font-size: var(--footer-logo-description-fz);
-		line-height: var(--footer-logo-description-lh);
-	}
-
-
-	// COLUMN
-	// -----------------------------------------------
-
-	&__column-title {
-		--footer-column-title-fw: var(--fw-sb);
-		--footer-column-title-fz: var(--fz-sm);
-		--footer-column-title-lh: var(--lh-lg);
-
-		font-size: var(--footer-column-title-fz);
-		font-weight: var(--footer-column-title-fw);
-		line-height: var(--footer-column-title-lh);
-		letter-spacing: .1em;
-		text-transform: uppercase;
-	}
-
-	&__column-time {
-		--footer-column-time-fz: var(--fz-sm);
-
-		margin: 5px 0;
-		font-size: var(--footer-column-time-fz);
-	}
-
-	&__column-text {
-		margin-top: 30px;
-		margin-bottom: 10px;
-	}
-
-	&__column-social-list {
-		list-style-type: none;
-	}
-
-	&__column-social-link {
-		&.icon--facebook {
-			fill: var(--facebook-icon-fill-cl);
-		}
-
-		&.icon--vk {
-			fill: var(--vk-icon-fill-cl);
-		}
-
-		&.icon--instagram {
-			fill: var(--instagram-icon-fill-cl);
+	&__bg-side {
+		&--image {
+			position: relative;
+			background-image: url('/img/index/footer/map.jpg');
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
 		}
 	}
 
-	&__column-adress {
-		--footer-column-adress-fz: var(--fz-sm);
-		--footer-column-adress-lh: var(--lh-xl);
-
-		margin-bottom: 20px;
-		font-size: var(--footer-column-adress-fz);
-		line-height: var(--footer-column-adress-lh);
+	&__bg-icon {
+		position: absolute;
+		top: 42%;
+		left: 46%;
+		fill: var(--footer-icon-bg-cl);
 	}
 
-	&__column-requisites {
-		--footer-column-requisites-fz: var(--fz-sm);
-		--footer-column-requisites-lh: var(--lh-xl);
+	&__contacts {
+		@include media-breakpoint-down(xl) {
+			padding-left: 40px;
+		}
 
-		font-size: var(--footer-column-requisites-fz);
-		line-height: var(--footer-column-requisites-lh);
-		text-transform: uppercase;
+		@include media-breakpoint-down(lg) {
+			padding: 45px 20px 60px;
+		}
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		padding: 120px 0 130px 70px;
 	}
 
-	// -----------------------------------------------
-	// COLUMN
+	&__contacts-inner {
+		@include media-breakpoint-down(lg) {
+			max-width: none;
+		}
 
-
-	// NAV
-	// -----------------------------------------------
-
-	&__nav-list {
-		list-style-type: none;
+		position: relative;
+		max-width: 375px;
 	}
 
-	&__nav-item {
-		margin-top: 10px;
+	&__title {
+		margin-bottom: 40px;
 	}
 
-	&__nav-link {
-		--footer-nav-link-hover-fw: var(--fw-b);
+	&__columns {
+		@include media-breakpoint-down(lg) {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
 
+		@include media-breakpoint-down(lg) {
+			flex-direction: column;
+		}
+
+		margin-bottom: 50px;
+	}
+
+	&__column {
+		@include media-breakpoint-down(lg) {
+			align-items: flex-start;
+		}
+
+		display: flex;
+		align-items: center;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__column-icon {
+		display: block;
+		margin-right: 10px;
+	}
+
+	&__column-link {
+		--footer-column-link-fz: var(--fz-md);
+		--footer-column-link-fw: var(--fw-b);
+
+		background-image:
+			linear-gradient(var(--cl-purple-100), var(--cl-purple-100)),
+			linear-gradient(transparent, transparent);
+		background-position: 0 100%, 100% 100%;
+		background-size: 0 2px, 100% 2px;
+		background-repeat: no-repeat, no-repeat;
+		color: var(--footer-column-link-cl);
+		font-size: var(--footer-column-link-fz);
+		font-weight: var(--footer-column-link-fw);
 		text-decoration: none;
-		transition: font-weight .2s;
+		transition: all .3s linear;
 
 		&:hover {
-			font-weight: var(--footer-nav-link-hover-fw);
+			background-size: 100% 2px, 0 2px;
 		}
 	}
 
-	// -----------------------------------------------
-	// NAV
-
-	&__contacts-link--whatsapp {
-		fill: var(--whatsapp-icon-fill-cl);
-	}
-
-	&__contacts-link--viber {
-		fill: var(--viber-icon-fill-cl);
-	}
-
-	&__contacts-icon {
-		color: currentColor;
+	&__buttons {
+		display: flex;
+		flex-direction: row;
 	}
 
 	&__button {
-		--footer-button-fw: var(--fw-sb);
-		--footer-button-fz: var(--fz-sm);
+		--footer-button-bg-cl: var(--footer-button-default-bg-cl);
 
-		margin-bottom: 20px;
-		box-shadow: var(--footer-button-shadow);
-		font-size: var(--footer-button-fz);
-		font-weight: var(--footer-button-fw);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 180px;
+		padding: 20px 0;
+		border: none;
+		background-color: var(--footer-button-bg-cl);
+		color: var(--footer-button-cl);
+		cursor: pointer;
+		transition: all .3s ease;
+
+		&:hover {
+			--footer-button-bg-cl: var(--footer-button-hover-bg-cl);
+		}
+
+		&:active {
+			padding: 22px 0 18px;
+		}
+
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+
+	&__button-icon {
+		margin-right: 15px;
+		fill: var(--footer-icon-cl);
+	}
+
+	&__content {
+		@include media-breakpoint-down(lg) {
+			top: 65%;
+		}
+
+		@include media-breakpoint-down(md) {
+			top: -5%;
+		}
+
+		position: absolute;
+		top: -5%;
+		right: 0;
 	}
 }

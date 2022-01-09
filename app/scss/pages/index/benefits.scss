@@ -1,0 +1,122 @@
+.benefits {
+	margin-bottom: 110px;
+
+	&__bg {
+		z-index: -1;
+	}
+
+	&__bg-img {
+		@include media-breakpoint-down(xl) {
+			height: 595px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			height: 530px;
+		}
+
+		@include media-breakpoint-down(md) {
+			height: 465px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			height: 180px;
+		}
+	}
+
+	&__content {
+		@include media-breakpoint-down(xl) {
+			position: absolute;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+
+		@include media-breakpoint-down(sm) {
+			position: relative;
+			display: block;
+		}
+
+		position: relative;
+		z-index: 1;
+	}
+
+	&__article {
+		@include media-breakpoint-down(xl) {
+			position: relative;
+			top: 0;
+			right: 0;
+		}
+
+		@include media-breakpoint-down(lg) {
+			top: -180px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			top: 0;
+			padding: 60px 15px;
+		}
+
+
+		position: absolute;
+		top: 90px;
+		right: 0;
+		padding: 60px 45px 80px 65px;
+		background-color: var(--benefits-content-bg-cl);
+		color: var(--benefits-content-cl);
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 50px;
+	}
+
+	&__title {
+		@include media-breakpoint-down(lg) {
+			--benefits-title-fz: var(--h2-md-fz);
+		}
+
+		--benefits-title-fz: var(--h2-fz);
+		--benefits-title-ff: var(--ff-merriweather);
+
+		font-family: var(--benefits-title-ff);
+		font-size: var(--benefits-title-fz);
+	}
+
+	&__img {
+		@include media-breakpoint-down(md) {
+			width: 140px;
+			height: 40px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			width: 120px;
+			height: 40px;
+		}
+	}
+
+	&__description {
+		list-style-type: none;
+	}
+
+	&__description-item {
+		display: table;
+		max-width: 500px;
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+
+		&::before {
+			content: '//';
+			display: table-cell;
+			padding-right: 20px;
+			color: var(--benefits-description-item-before-cl);
+			font-size: 20px;
+			line-height: 0;
+			vertical-align: middle;
+		}
+	}
+}
