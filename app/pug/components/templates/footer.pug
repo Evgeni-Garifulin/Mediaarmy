@@ -1,36 +1,36 @@
 include ../mixins/svg
 include ../mixins/picture
 
-footer.footer
+footer#footer.footer
 	.row.g-0.footer__inner
-		div(class='col-12 lg:col-7 footer__bg-side--image')
-			+picture-w100p('footer__bg-img', 'footer/map', 'Карта', '615', '1000')
-			img.footer__bg-icon(src='/img/index/footer/mark.svg' width='45' height='65' alt='Отметка на карте')
+		div(class='col-12 lg:col-7 footer__bg')
+			+picture-w100p('footer__bg-img', 'footer/plan', 'Карта', '615', '1000')
+			img.footer__bg-icon(src='img/index/footer/mark.svg' width='45' height='65' alt='Отметка на карте')
 		div(class='col-12 order-first lg:order-2 lg:col-5 footer__bg-side--description')
-			.footer__contacts
-				.footer__contacts-inner
-					h2.footer__title Контакты
-					.footer__columns
-						.footer__column
-							+svg('footer__column-icon', '18', '21', 'Телефон', 'phone')
-							a.footer__column-link(href='tel:+73432989888') +7 (343) 298-98-88
-						.footer__column
-							+svg('footer__column-icon', '18', '21', 'Адрес', 'point')
-							p.footer__column-text Екатеринбург, ул. Малышева&nbsp;51,
+			.footer__content
+				.footer__content-inner
+					h2.footer__content-title Контакты
+					.footer__content-columns
+						.footer__content-column
+							+svg('footer__content-column-icon', '18', '21', 'Телефон', 'phone')
+							a.footer__content-column-link(href='tel:+73432989888') +7 (343) 298-98-88
+						.footer__content-column
+							+svg('footer__content-column-icon', '18', '21', 'Адрес', 'point')
+							p.footer__content-column-text Екатеринбург, ул. Малышева&nbsp;51,
 								br
 								| БЦ&nbsp;Высоцкий, 50&nbsp;этаж
-						.footer__column
-							+svg('footer__column-icon', '18', '21', 'Рабочее время', 'clock')
-							p.footer__column-text вс-чт с&nbsp;16:00 до&nbsp;00:00
+						.footer__content-column
+							+svg('footer__content-column-icon', '18', '21', 'Рабочее время', 'clock')
+							p.footer__content-column-text вс-чт с&nbsp;16:00 до&nbsp;00:00
 								br
 								| пт-сб с&nbsp;16:00 до&nbsp;04:00
-					.footer__buttons
-						button.footer__button(type='button')
-							+svg('footer__button-icon', '12', '26', 'Facebook', 'fb')
+					.footer__content-buttons
+						button.footer__content-button(type='button')
+							+svg('footer__content-button-icon', '12', '26', 'Facebook', 'fb')
 							span Facebook
-						button.footer__button(type='button')
-							+svg('footer__button-icon', '21', '22', 'Instagram', 'insta')
+						button.footer__content-button(type='button')
+							+svg('footer__content-button-icon', '21', '22', 'Instagram', 'insta')
 							span Instagram
-					.footer__content
-						img.max-w-100p.footer__content-icon(src='/img/index/footer/lighter.svg' width='100' height='105' alt='Зажигалка')
+					.footer__content-img
+						img.max-w-100p.footer__content-icon(src='img/index/footer/lighter.svg' width='100' height='105' alt='Зажигалка')
 

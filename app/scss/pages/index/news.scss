@@ -33,6 +33,10 @@
 		font-weight: var(--news-title-fw);
 	}
 
+	&__swiper {
+		padding-right: 15px;
+	}
+
 	&__swiper-buttons {
 		display: flex;
 	}
@@ -54,6 +58,24 @@
 		&.swiper-button-disabled {
 			border: 1px solid var(--news-swiper-border-disabled-cl);
 			fill: var(--news-swiper-fill-disabled-cl);
+		}
+	}
+
+	&__article {
+		@include media-breakpoint-down(xl) {
+			max-width: 365px;
+		}
+
+		@include media-breakpoint-down(lg) {
+			max-width: 350px;
+		}
+
+		@include media-breakpoint-down(md) {
+			max-width: 320px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			max-width: 290px;
 		}
 	}
 

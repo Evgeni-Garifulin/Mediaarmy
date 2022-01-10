@@ -22,6 +22,6 @@ const burgerMenuShow = () => {
 		menu.style.display = 'none';
 		overlay.style.display = 'none';
 	});
-}
+};
 
 export { burgerMenuShow };

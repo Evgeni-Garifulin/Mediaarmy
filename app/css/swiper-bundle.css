@@ -248,6 +248,11 @@
 	pointer-events: auto;
 }
 
+.button-next-icon,
+.button-prev-icon {
+	display: block;
+}
+
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
 	right: auto;

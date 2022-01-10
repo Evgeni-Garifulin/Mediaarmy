@@ -66,14 +66,14 @@
 		color: var(--benefits-content-cl);
 	}
 
-	&__top {
+	&__article-top {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		margin-bottom: 50px;
 	}
 
-	&__title {
+	&__article-title {
 		@include media-breakpoint-down(lg) {
 			--benefits-title-fz: var(--h2-md-fz);
 		}
@@ -85,7 +85,7 @@
 		font-size: var(--benefits-title-fz);
 	}
 
-	&__img {
+	&__article-img {
 		@include media-breakpoint-down(md) {
 			width: 140px;
 			height: 40px;
@@ -97,11 +97,11 @@
 		}
 	}
 
-	&__description {
+	&__article-description {
 		list-style-type: none;
 	}
 
-	&__description-item {
+	&__article-item {
 		display: table;
 		max-width: 500px;
 

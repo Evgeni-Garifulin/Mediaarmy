@@ -1,13 +1,12 @@
 .footer {
-	&__bg-side {
-		&--image {
-			position: relative;
-			background-image: url('/img/index/footer/map.jpg');
-			background-position: center;
-			background-size: cover;
-			background-repeat: no-repeat;
+	&__bg {
+		@include media-breakpoint-down(lg) {
+			height: 460px;
 		}
+
+		position: relative;
 	}
+
 
 	&__bg-icon {
 		position: absolute;
@@ -16,7 +15,7 @@
 		fill: var(--footer-icon-bg-cl);
 	}
 
-	&__contacts {
+	&__content {
 		@include media-breakpoint-down(xl) {
 			padding-left: 40px;
 		}
@@ -32,7 +31,7 @@
 		padding: 120px 0 130px 70px;
 	}
 
-	&__contacts-inner {
+	&__content-inner {
 		@include media-breakpoint-down(lg) {
 			max-width: none;
 		}
@@ -41,11 +40,11 @@
 		max-width: 375px;
 	}
 
-	&__title {
+	&__content-title {
 		margin-bottom: 40px;
 	}
 
-	&__columns {
+	&__content-columns {
 		@include media-breakpoint-down(lg) {
 			display: flex;
 			flex-direction: row;
@@ -59,7 +58,7 @@
 		margin-bottom: 50px;
 	}
 
-	&__column {
+	&__content-column {
 		@include media-breakpoint-down(lg) {
 			align-items: flex-start;
 		}
@@ -72,12 +71,12 @@
 		}
 	}
 
-	&__column-icon {
+	&__content-column-icon {
 		display: block;
 		margin-right: 10px;
 	}
 
-	&__column-link {
+	&__content-column-link {
 		--footer-column-link-fz: var(--fz-md);
 		--footer-column-link-fw: var(--fw-b);
 
@@ -98,12 +97,19 @@
 		}
 	}
 
-	&__buttons {
+	&__content-buttons {
 		display: flex;
 		flex-direction: row;
 	}
 
-	&__button {
+	&__content-button {
+		@include media-breakpoint-down(md) {
+			padding: 20px 0 15px;
+
+			&:active {
+				padding: 22px 0 13px !important;
+			}
+		}
 		--footer-button-bg-cl: var(--footer-button-default-bg-cl);
 
 		display: flex;
@@ -130,12 +136,12 @@
 		}
 	}
 
-	&__button-icon {
+	&__content-button-icon {
 		margin-right: 15px;
 		fill: var(--footer-icon-cl);
 	}
 
-	&__content {
+	&__content-img {
 		@include media-breakpoint-down(lg) {
 			top: 65%;
 		}

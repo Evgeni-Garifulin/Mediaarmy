@@ -76,6 +76,10 @@
 		display: flex;
 	}
 
+	&__swiper {
+		padding-right: 15px;
+	}
+
 	&__swiper-buttons {
 		@include media-breakpoint-down(md) {
 			display: flex;
