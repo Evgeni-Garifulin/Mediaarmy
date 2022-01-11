@@ -8,14 +8,24 @@ section#menu.menu
 					.menu__choose.menu__choose--active Фирменные кальяны
 					.menu__choose Сигары и сигарилы
 					.menu__choose Классические кальяны
-				.menu__swiper-buttons
-					button.swiper-button-prev.menu__swiper-button.menu__swiper-button--prev
+				.menu__swiper-buttons.d-none
+					button.swiper-button-prev.menu__swiper-button.menu__swiper-button--prev.menu__swiper-button-prev--hookah
 						+svg('button-prev-icon', '19', '22', 'Предыдущий слайд', 'left-arrow')
-					button.swiper-button-next.menu__swiper-button.menu__swiper-button--next
+					button.swiper-button-next.menu__swiper-button.menu__swiper-button-next--hookah
+						+svg('button-next-icon', '19', '22', 'Следующий слайд', 'right-arrow')
+				.menu__swiper-buttons.d-none
+					button.swiper-button-prev.menu__swiper-button.menu__swiper-button--prev.menu__swiper-button-prev--sigars
+						+svg('button-prev-icon', '19', '22', 'Предыдущий слайд', 'left-arrow')
+					button.swiper-button-next.menu__swiper-button.menu__swiper-button-next--sigars
+						+svg('button-next-icon', '19', '22', 'Следующий слайд', 'right-arrow')
+				.menu__swiper-buttons.d-none
+					button.swiper-button-prev.menu__swiper-button.menu__swiper-button--prev.menu__swiper-button-prev--alcohol
+						+svg('button-prev-icon', '19', '22', 'Предыдущий слайд', 'left-arrow')
+					button.swiper-button-next.menu__swiper-button.menu__swiper-button-next--alcohol
 						+svg('button-next-icon', '19', '22', 'Следующий слайд', 'right-arrow')
 	.container.container--swiper-md
 		div(class='menu__result d-none')
-			.swiper.menu__swiper
+			.swiper.menu__swiper.menu__swiper-hookah
 				.swiper-wrapper
 					.swiper-slide
 						.menu__card
@@ -66,7 +76,7 @@ section#menu.menu
 								span.fw-sb Крепость:
 								|  средняя
 		div(class='menu__result d-none')
-			.swiper.menu__swiper
+			.swiper.menu__swiper.menu__swiper-sigars
 				.swiper-wrapper
 					.swiper-slide
 						.menu__card
@@ -98,7 +108,7 @@ section#menu.menu
 							h4.mb-30 Никарагуа
 							p Nub Sun Grown 460 Tubos
 		div(class='menu__result d-none')
-			.swiper.menu__swiper
+			.swiper.menu__swiper.menu__swiper-alcohol
 				.swiper-wrapper
 					.swiper-slide
 						.menu__card
