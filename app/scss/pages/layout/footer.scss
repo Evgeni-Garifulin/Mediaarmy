@@ -98,8 +98,12 @@
 	}
 
 	&__content-buttons {
+		@include media-breakpoint-down(sm) {
+			flex-direction: column;
+		}
+
 		display: flex;
-		flex-direction: row;
+		flex-wrap: wrap;
 	}
 
 	&__content-button {
@@ -108,6 +112,16 @@
 
 			&:active {
 				padding: 22px 0 13px !important;
+			}
+		}
+
+		@include media-breakpoint-down(md) {
+			width: 145px;
+		}
+
+		@include media-breakpoint-down(sm) {
+			&:not(:last-child) {
+				margin-bottom: 15px;
 			}
 		}
 		--footer-button-bg-cl: var(--footer-button-default-bg-cl);
@@ -148,6 +162,10 @@
 
 		@include media-breakpoint-down(md) {
 			top: -5%;
+		}
+
+		@include media-breakpoint-down(sm) {
+			top: -10%;
 		}
 
 		position: absolute;

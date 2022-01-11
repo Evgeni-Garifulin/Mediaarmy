@@ -9,5 +9,7 @@
 
 	@include get-alpha($cl, 'graphite-80', $ca-graphite-80);
 
+	@include get-alpha($cl, 'graphite-200', $ca-graphite-200);
+
 	@include get-alpha($cl, 'black', $ca-black);
 }

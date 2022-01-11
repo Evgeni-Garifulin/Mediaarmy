@@ -1,8 +1,36 @@
 .benefits {
+	@include media-breakpoint-down(sm) {
+		display: flex;
+		flex-direction: column;
+	}
+
+	position: relative;
+	height: 659px;
 	margin-bottom: 110px;
+	scroll-margin-top: 110px;
 
 	&__bg {
-		z-index: -1;
+		@include media-breakpoint-down(xl) {
+			width: 100%;
+			background-position: top;
+		}
+
+		@include media-breakpoint-down(sm) {
+			position: relative;
+			order: 1;
+			background-position: center;
+		}
+
+		content: '';
+		position: absolute;
+		left: 0%;
+		z-index: 1;
+		width: 58.3%;
+		height: 100%;
+		background-image: url('../img/index/benefits/bg.jpg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 
 	&__bg-img {
@@ -35,6 +63,7 @@
 		@include media-breakpoint-down(sm) {
 			position: relative;
 			display: block;
+			order: -1;
 		}
 
 		position: relative;
@@ -81,8 +110,20 @@
 		--benefits-title-fz: var(--h2-fz);
 		--benefits-title-ff: var(--ff-merriweather);
 
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
 		font-family: var(--benefits-title-ff);
 		font-size: var(--benefits-title-fz);
+
+		&::after {
+			content: '';
+			width: 170px;
+			height: 55px;
+			background-image: url('../img/index/benefits/leaflet.svg');
+			background-repeat: no-repeat;
+		}
 	}
 
 	&__article-img {
@@ -102,7 +143,8 @@
 	}
 
 	&__article-item {
-		display: table;
+		display: flex;
+		align-items: center;
 		max-width: 500px;
 
 		&:not(:last-child) {
@@ -111,8 +153,7 @@
 
 		&::before {
 			content: '//';
-			display: table-cell;
-			padding-right: 20px;
+			margin-right: 20px;
 			color: var(--benefits-description-item-before-cl);
 			font-size: 20px;
 			line-height: 0;

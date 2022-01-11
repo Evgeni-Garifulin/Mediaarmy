@@ -227,6 +227,7 @@
 	width: 35px;
 	height: 45px;
 	margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+	padding: 0;
 	background-color: transparent;
 	cursor: pointer;
 	transition: all.3s ease-in-out;

@@ -28,3 +28,9 @@ mixin picture-wauto (className='', set='', title='', height='', width='')
 		source(srcset='img/index/'+set+'.jpg' type='image/jpeg')
 		img.w-auto.obj-c(src='./img/index/'+set+'.jpg' loading='lazy' alt=title height=height width=width)
 
+mixin picture-simple (className='', set='', title='', height='', width='')
+	picture(class=className)
+		source(srcset='img/webp/index/'+set+'.webp' type='image/webp')
+		source(srcset='img/index/'+set+'.jpg' type='image/jpeg')
+		img(src='./img/index/'+set+'.jpg' loading='lazy' alt=title height=height width=width)
+

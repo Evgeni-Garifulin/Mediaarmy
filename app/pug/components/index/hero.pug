@@ -1,0 +1,77 @@
+include ../mixins/svg
+include ../mixins/picture
+
+section.hero
+	.hero__bg
+	.hero__inner
+		.container
+			header.header
+				.header__inner
+					.header__logo
+						a.header__logo-link(href='/')
+							img.header__logo-icon(src='img/logo.png' width='91' alt='Логотип')
+							p.header__logo-name Дым Кудрявый
+					ul.header__social
+						li.header__social-item
+							a.header__social-link(href='#')
+								+svg('header__social-icon', '19', '16', 'Вконтакте', 'vk')
+						li.header__social-item
+							a.header__social-link(href='#')
+								+svg('header__social-icon', '15', '16', 'Инстаграм', 'insta')
+						li.header__social-item
+							a.header__social-link(href='#')
+								+svg('header__social-icon', '8', '16', 'Фейсбук', 'fb')
+					nav.header__menu
+						ul.header__menu-list
+							li.header__menu-item
+								a.header__menu-link(href='#info') О клубе
+							li.header__menu-item
+								a.header__menu-link(href='#interior') Интерьер
+							li.header__menu-item
+								a.header__menu-link(href='#menu') Меню
+							li.header__menu-item
+								a.header__menu-link(href='#benefits') Преимущества
+							li.header__menu-item
+								a.header__menu-link(href='#news') Новости
+							li.header__menu-item
+								a.header__menu-link(href='#footer') Контакты
+					.header__mobile
+						+svg('header__mobile-icon', '25', '16', 'Мобильное меню', 'burger')
+					nav.header__mobile-menu(style='display:none')
+						ul.header__mobile-menu-list
+							li.header__mobile-menu-item
+								a.header__mobile-menu-link(href='#info') О клубе
+							li.header__mobile-menu-item
+								a.header__mobile-menu-link(href='#interior') Интерьер
+							li.header__mobile-menu-item
+								a.header__mobile-menu-link(href='#menu') Меню
+							li.header__mobile-menu-item
+								a.header__mobile-menu-link(href='#benefits') Преимущества
+							li.header__mobile-menu-item
+								a.header__mobile-menu-link(href='#news') Новости
+							li.header__mobile-menu-item
+								a.header__mobile-menu-link(href='#footer') Контакты
+						ul.header__mobile-social
+							li.header__mobile-social-item
+								a.header__mobile-social-link(href='#')
+									+svg('header__mobile-social-icon', '19', '11', 'Вконтакте', 'vk')
+							li.header__mobile-social-item
+								a.header__mobile-social-link(href='#')
+									+svg('header__mobile-social-icon', '15', '16', 'Инстаграм', 'insta')
+							li.header__mobile-social-item
+								a.header__mobile-social-link(href='#')
+									+svg('header__mobile-social-icon', '8', '16', 'Фейсбук', 'fb')
+						+svg('header__mobile-close', '30', '35', 'Закрыть меню', 'cross')
+			.hero__content
+				.hero__content-figure
+					h1.hero__content-title Самый шикарный курительный клуб Урала
+			.hero__bottom
+				.hero__column
+					+svg('hero__column-icon', '18', '21', 'Телефон', 'phone')
+					a.hero__column-link(href='tel:+73432989888') +7 (343) 298-98-88
+				.hero__column
+					+svg('hero__column-icon', '18', '21', 'Рабочее время', 'clock')
+					span.hero__column-text вс-чт с&nbsp;16:00 до&nbsp;00:00 пт-сб с&nbsp;16:00 до&nbsp;04:00
+				.hero__column
+					+svg('hero__column-icon', '18', '21', 'Адрес', 'point')
+					span.hero__column-text Екатеринбург, БЦ&nbsp;Высоцкий,&nbsp;50&nbsp;этаж

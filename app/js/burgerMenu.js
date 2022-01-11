@@ -1,8 +1,8 @@
 const burgerMenuShow = () => {
-	const menu = document.querySelector('.header__menu--mobile');
-	const close = document.querySelector('.header__menu-close');
+	const menu = document.querySelector('.header__mobile-menu');
+	const close = document.querySelector('.header__mobile-close');
 	const body = document.querySelector('body');
-	const button = document.querySelector('.header__mobile-menu');
+	const button = document.querySelector('.header__mobile');
 	const overlay = document.querySelector('.page-overlay');
 
 	button.addEventListener('click', () => {

@@ -13,10 +13,11 @@ section#news.news
 		.swiper.news__swiper
 			.swiper-wrapper
 				.swiper-slide.news__swiper-slide
-					article.news__article
-						+picture('news__article-img', 'news/sofa', 'Диван', '265', '380')
-						.news__article-date 8 апреля
-						h3.news__article-title Наш курительный клуб ежедневно работает с&nbsp;16:00
+					a.news__link(href='#')
+						article.news__article
+							+picture('news__article-img', 'news/sofa', 'Диван', '265', '380')
+							.news__article-date 8 апреля
+							h3.news__article-title Наш курительный клуб ежедневно работает с&nbsp;16:00
 				.swiper-slide.news__swiper-slide
 					article.news__article
 						+picture('news__article-img', 'news/bottles', 'Бар', '265', '380')

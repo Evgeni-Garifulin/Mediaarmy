@@ -27,9 +27,14 @@
 		}
 
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 		padding: 64px 0;
+	}
+
+	&__description {
+		margin-right: 10px;
 	}
 
 	&__title {
@@ -48,6 +53,7 @@
 		font-family: var(--partners-title-ff);
 		font-size: var(--partners-title-fz);
 		font-weight: var(--partners-title-fw);
+		scroll-margin-top: 90px;
 	}
 
 	&__text {
@@ -70,6 +76,7 @@
 	&__button {
 		--partners-button-bg-cl: var(--partners-button-default-bg-cl);
 
+		margin-top: 10px;
 		padding: 20px 30px;
 		border: none;
 		background-color: var(--partners-button-bg-cl);

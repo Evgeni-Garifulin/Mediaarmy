@@ -8,6 +8,7 @@
 	}
 
 	margin-bottom: 120px;
+	scroll-margin-top: 90px;
 
 	&__inner {
 		position: relative;
@@ -29,18 +30,12 @@
 	}
 
 	&__img {
-		@include media-breakpoint-down(xl) {
+		@include media-breakpoint-down(lg) {
 			width: 160px;
 			height: 100px;
 		}
 
-		@include media-breakpoint-down(lg) {
-			width: 135px;
-			height: 120px;
-		}
-
 		@include media-breakpoint-down(md) {
-			top: -120px;
 			width: 130px;
 			height: 115px;
 		}
@@ -51,7 +46,7 @@
 		}
 
 		position: absolute;
-		top: -30px;
+		top: -40px;
 		right: 0;
 	}
 

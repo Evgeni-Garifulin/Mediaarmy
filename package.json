@@ -65,6 +65,7 @@
         ]
     },
     "dependencies": {
+        "lightbox2": "^2.11.3",
         "swiper": "^7.2.0"
     }
 }
