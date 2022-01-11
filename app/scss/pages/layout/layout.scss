@@ -37,15 +37,6 @@ body {
 	margin: 0 auto;
 	padding: 0 20px;
 
-	&--swiper-xl {
-		@include media-breakpoint-down(xl) {
-			margin: 0;
-			padding: 0 0 0 20px;
-		}
-
-		margin: 0 0 0 calc(50% - 590px);
-	}
-
 	&--swiper-md {
 		@include media-breakpoint-down(md) {
 			margin: 0;
@@ -59,4 +50,13 @@ body {
 			padding: 0;
 		}
 	}
+}
+
+.container-swiper-xl {
+	@include media-breakpoint-down(xl) {
+		margin: 0;
+		padding: 0 0 0 20px;
+	}
+
+	margin: 0 0 0 calc(50% - 590px);
 }

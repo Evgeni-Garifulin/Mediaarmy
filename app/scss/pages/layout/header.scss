@@ -176,6 +176,11 @@
 			display: none;
 		}
 
+		@include media-breakpoint-up(sm) {
+			right: -10px;
+		}
+
+
 		--header-mobile-cl: var(--header-mobile-default-cl);
 
 		position: absolute;
