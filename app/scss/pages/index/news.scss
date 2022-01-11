@@ -35,10 +35,6 @@
 	}
 
 	&__swiper {
-		@include media-breakpoint-down(md) {
-			overflow: inherit;
-		}
-
 		padding-right: 15px;
 	}
 

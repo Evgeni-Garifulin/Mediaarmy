@@ -50,10 +50,6 @@
 	}
 
 	&__swiper {
-		@include media-breakpoint-down(xl) {
-			overflow: inherit;
-		}
-
 		padding-right: 15px;
 	}
 
