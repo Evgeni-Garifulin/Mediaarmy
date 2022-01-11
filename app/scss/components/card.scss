@@ -1,16 +1,16 @@
 .card {
 	h4 {
-		--wysiwyg-h4-fz: var(--h4-fz);
+		--menu-card-h4-fz: var(--h4-fz);
 
 		margin: 0;
-		font-size: var(--wysiwyg-h4-fz);
+		font-size: var(--menu-card-h4-fz);
 	}
 
 	h5 {
-		--wysiwyg-h5-fz: var(--h5-fz);
+		--menu-card-h5-fz: var(--h5-fz);
 
 		margin: 0;
-		font-size: var(--wysiwyg-h5-fz);
+		font-size: var(--menu-card-h5-fz);
 	}
 
 	.price {
@@ -19,9 +19,9 @@
 	}
 
 	p {
-		--wysiwyg-p-fz: var(--fz-md);
+		--menu-card-p-fz: var(--fz-md);
 
 		margin-top: 10px;
-		font-size: var(--wysiwyg-p-fz);
+		font-size: var(--menu-card-p-fz);
 	}
 }

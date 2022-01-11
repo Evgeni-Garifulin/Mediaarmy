@@ -150,9 +150,35 @@
 		border: 4px solid var(--menu-card-border-cl);
 	}
 
-	&__card-head {
+	&__card-heading {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+	}
+
+	&__price {
+		color: var(--menu-card-price-cl);
+		font-weight: var(--fw-b);
+	}
+
+	h4 {
+		--menu-card-h4-fz: var(--h4-fz);
+
+		margin: 0;
+		font-size: var(--menu-card-h4-fz);
+	}
+
+	h5 {
+		--menu-card-h5-fz: var(--h5-fz);
+
+		margin: 0;
+		font-size: var(--menu-card-h5-fz);
+	}
+
+	p {
+		--menu-card-p-fz: var(--fz-md);
+
+		margin-top: 10px;
+		font-size: var(--menu-card-p-fz);
 	}
 }

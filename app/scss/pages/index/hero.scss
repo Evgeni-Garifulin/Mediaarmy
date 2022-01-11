@@ -8,44 +8,39 @@
 	height: 870px;
 	margin-bottom: 110px;
 
-	&__bg {
-		position: relative;
+	&::before {
+		@include media-breakpoint-down(lg) {
+			display: none;
+		}
+
+		content: '';
+		position: absolute;
+		z-index: 2;
+		width: 41.7%;
 		height: 100%;
+		background-color: var(--cl-graphite-80);
+		background-image: url('../img/index/hero/left-pic.jpg');
+		background-position: bottom;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 
-		&::before {
-			@include media-breakpoint-down(lg) {
-				display: none;
-			}
-
-			content: '';
-			position: absolute;
-			z-index: 2;
-			width: 41.7%;
-			height: 100%;
-			background-color: var(--cl-graphite-80);
-			background-image: url('../img/index/hero/left-pic.jpg');
-			background-position: bottom;
-			background-size: cover;
-			background-repeat: no-repeat;
+	&::after {
+		@include media-breakpoint-down(lg) {
+			width: 100%;
 		}
 
-		&::after {
-			@include media-breakpoint-down(lg) {
-				width: 100%;
-			}
-
-			content: '';
-			position: absolute;
-			right: 0%;
-			z-index: 2;
-			width: 58.3%;
-			height: 100%;
-			background-color: var(--cl-graphite-300);
-			background-image: url('../img/index/hero/right-pic.jpg');
-			background-position: bottom;
-			background-size: cover;
-			background-repeat: no-repeat;
-		}
+		content: '';
+		position: absolute;
+		right: 0%;
+		z-index: 2;
+		width: 58.3%;
+		height: 100%;
+		background-color: var(--cl-graphite-300);
+		background-image: url('../img/index/hero/right-pic.jpg');
+		background-position: bottom;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 
 	&__inner {
