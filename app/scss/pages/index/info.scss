@@ -62,9 +62,9 @@
 		height: 325px;
 	}
 
-	&__column-line {
-		margin-bottom: 40px;
-		border: 1px solid var(--column-line-cl);
+	&__column {
+		padding-top: 40px;
+		border-top: 1px solid var(--column-line-cl);
 	}
 
 	&__column-title {
