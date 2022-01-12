@@ -110,15 +110,14 @@
 
 	&__content-button {
 		@include media-breakpoint-down(md) {
+			width: 145px;
+			height: 60px;
 			padding: 20px 0 15px;
+
 
 			&:active {
 				padding: 22px 0 13px !important;
 			}
-		}
-
-		@include media-breakpoint-down(md) {
-			width: 145px;
 		}
 
 		@include media-breakpoint-down(sm) {

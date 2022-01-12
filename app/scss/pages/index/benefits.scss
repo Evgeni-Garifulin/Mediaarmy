@@ -120,10 +120,16 @@
 		font-size: var(--benefits-title-fz);
 
 		&::after {
+			@include media-breakpoint-down(sm) {
+				width: 120px;
+				background-size: 120px;
+			}
+
 			content: '';
 			width: 170px;
 			height: 55px;
 			background-image: url('../img/index/benefits/leaflet.svg');
+			background-size: 170px;
 			background-repeat: no-repeat;
 		}
 	}
