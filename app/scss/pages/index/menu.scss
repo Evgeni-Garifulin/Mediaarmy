@@ -1,13 +1,19 @@
 .menu {
+	@include media-breakpoint-down(xl) {
+		padding-top: 90px;
+	}
+
 	@include media-breakpoint-down(lg) {
-		margin-bottom: 260px;
+		padding-top: 70px;
+		padding-bottom: 260px;
 	}
 
 	@include media-breakpoint-down(sm) {
-		margin-bottom: 50px;
+		padding-bottom: 50px;
 	}
 
-	margin-bottom: 120px;
+	padding-top: 110px;
+	padding-bottom: 120px;
 	scroll-margin-top: 90px;
 
 	&__inner {

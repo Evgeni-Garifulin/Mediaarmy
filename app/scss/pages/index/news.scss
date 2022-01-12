@@ -1,13 +1,14 @@
 .news {
 	@include media-breakpoint-down(lg) {
-		margin-bottom: 70px;
+		padding-bottom: 70px;
 	}
 
 	@include media-breakpoint-down(sm) {
-		margin-bottom: 95px;
+		padding-bottom: 95px;
 	}
 
-	margin-bottom: 110px;
+	padding-top: 110px;
+	padding-bottom: 110px;
 	scroll-margin-top: 90px;
 
 	&__inner {

@@ -1,6 +1,4 @@
 .header {
-	position: relative;
-
 	&__inner {
 		@include media-breakpoint-down(xl) {
 			justify-content: space-between;
@@ -23,17 +21,15 @@
 	}
 
 	&__social-item {
-		max-height: 35px;
-		padding: 10px;
-
-		&:not(:last-child) {
-			margin-right: 10px;
-		}
+		max-height: 100%;
 	}
 
 	&__social-link {
 		--header-social-cl: var(--header-social-default-cl);
 
+
+		display: block;
+		padding: 10px;
 		color: var(--header-social-cl);
 		cursor: pointer;
 		transition: all .3s;
@@ -62,17 +58,11 @@
 		list-style-type: none;
 	}
 
-	&__mobile-social-item {
-		padding: 10px;
-
-		&:not(:last-child) {
-			margin-right: 10px;
-		}
-	}
-
 	&__mobile-social-link {
 		--header-social-cl: var(--header-social-default-cl);
 
+		display: block;
+		padding: 10px;
 		color: var(--header-social-cl);
 		cursor: pointer;
 		transition: all .3s;
@@ -137,15 +127,11 @@
 			display: none;
 		}
 
-		@include media-breakpoint-down(sm) {
-			right: -10px;
-		}
-
 		--header-mobile-cl: var(--header-mobile-default-cl);
 
 		position: absolute;
 		top: 95px;
-		right: 0;
+		right: 10px;
 		padding: 10px;
 		color: var(--header-mobile-cl);
 		cursor: pointer;
@@ -218,13 +204,9 @@
 	}
 
 	&__mobile-close {
-		@include media-breakpoint-down(sm) {
-			right: 30px;
-		}
-
 		position: absolute;
 		top: 86px;
-		right: 15px;
+		right: 7px;
 		margin: 10px;
 		fill: var(--cl-white);
 		cursor: pointer;

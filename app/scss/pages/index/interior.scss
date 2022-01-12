@@ -1,14 +1,6 @@
 .interior {
-	@include media-breakpoint-down(xl) {
-		margin-bottom: 90px;
-	}
-
-	@include media-breakpoint-down(lg) {
-		margin-bottom: 70px;
-	}
-
 	position: relative;
-	margin-bottom: 110px;
+	padding-top: 60px;
 	padding-bottom: 70px;
 	scroll-margin-top: 90px;
 
@@ -31,7 +23,6 @@
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 45px;
-		padding-top: 60px;
 	}
 
 	&__title {
