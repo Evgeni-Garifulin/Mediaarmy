@@ -100,10 +100,6 @@
 	}
 
 	&__content-buttons {
-		@include media-breakpoint-down(sm) {
-			flex-direction: column;
-		}
-
 		display: flex;
 		flex-wrap: wrap;
 	}
