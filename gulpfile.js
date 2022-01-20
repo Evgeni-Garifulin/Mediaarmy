@@ -16,6 +16,7 @@ const buildImg = require('./gulp/tasks/img');
 const buildWebp = require('./gulp/tasks/webp');
 const buildSvgSprite = require('./gulp/tasks/spriteSVG');
 const buildLibs = require('./gulp/tasks/libs');
+const buildFavicons = require('./gulp/tasks/favicons');
 const buildHtml = require('./gulp/tasks/html');
 const buildPug = require('./gulp/tasks/pug');
 const clean = require('./gulp/tasks/clean');
@@ -30,6 +31,7 @@ exports.build = build = gulp.parallel(
     buildWebp,
     buildSvgSprite,
     buildLibs,
+    buildFavicons,
     buildFonts,
 );
 exports.default = gulp.series(clean, build, gulp.parallel(browserSync, watch));

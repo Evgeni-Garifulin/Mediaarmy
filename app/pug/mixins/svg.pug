@@ -1,0 +1,5 @@
+mixin svg (name='', width='', height='', className='', title='')
+	svg(class=className width=width height=height)
+		if(title !== '')
+			title= title
+		use(xlink:href='img/svg/icons.svg#'+name)

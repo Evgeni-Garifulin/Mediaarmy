@@ -1,0 +1,95 @@
+include ../mixins/svg
+include ../mixins/picture
+
+section#interior.interior
+	.container
+		.interior__inner
+			h2.interior__title Интерьер
+			.interior__swiper-buttons
+				button.swiper-button-prev.interior__swiper-button.interior__swiper-button--prev
+					+svg('left-arrow', '19', '22', 'button-prev-icon', 'Предыдущий слайд')
+				button.swiper-button-next.interior__swiper-button.interior__swiper-button--next
+					+svg('right-arrow', '19', '22', 'button-next-icon', 'Следующий слайд')
+	.container-swiper-xl
+		.swiper.interior__swiper
+			.swiper-wrapper
+				.swiper-slide.interior__swiper-slide
+					a(href='img/index/interior/bar.jpg' data-lightbox='roadtrip' data-title='Бар')
+						+webp({
+							pictureClas: 'interior__img',
+							imgClass:'h-100 obj-c',
+							alt: 'Кальянный бар',
+							width: '360',
+							height: '410',
+							imgPath: 'index/interior/bar.jpg',
+						})
+				.swiper-slide.interior__swiper-slide
+					a(href='img/index/interior/place.jpg' data-lightbox='roadtrip' data-title='Наш интерьер')
+						+webp({
+							pictureClas: 'interior__img',
+							imgClass:'h-100 obj-c',
+							alt: 'Интерьер кальянной',
+							width: '360',
+							height: '410',
+							imgPath: 'index/interior/place.jpg',
+						})
+				.swiper-slide.interior__swiper-slide
+					a(href='img/index/interior/furniture.jpg' data-lightbox='roadtrip' data-title='Детали интерьера')
+						+webp({
+							pictureClas: 'interior__img',
+							imgClass:'h-100 obj-c',
+							alt: 'Детали интерьера',
+							width: '360',
+							height: '410',
+							imgPath: 'index/interior/furniture.jpg',
+						})
+				.swiper-slide.interior__swiper-slide
+					a(href='img/index/interior/hookah.jpg' data-lightbox='roadtrip' data-title='Наши кальяны')
+						+webp({
+								pictureClas: 'interior__img',
+								imgClass:'h-100 obj-c',
+								alt: 'Кальяны',
+								width: '360',
+								height: '410',
+								imgPath: 'index/interior/hookah.jpg',
+							})
+				.swiper-slide.interior__swiper-slide
+					a(href='img/index/interior/bar.jpg' data-lightbox='roadtrip' data-title='Бар')
+						+webp({
+							pictureClas: 'interior__img',
+							imgClass:'h-100 obj-c',
+							alt: 'Кальянный бар',
+							width: '360',
+							height: '410',
+							imgPath: 'index/interior/bar.jpg',
+						})
+				.swiper-slide.interior__swiper-slide
+					a(href='img/index/interior/place.jpg' data-lightbox='roadtrip' data-title='Наш интерьер')
+						+webp({
+							pictureClas: 'interior__img',
+							imgClass:'h-100 obj-c',
+							alt: 'Интерьер кальянной',
+							width: '360',
+							height: '410',
+							imgPath: 'index/interior/place.jpg',
+						})
+				.swiper-slide.interior__swiper-slide
+					a(href='img/index/interior/furniture.jpg' data-lightbox='roadtrip' data-title='Детали интерьера')
+						+webp({
+							pictureClas: 'interior__img',
+							imgClass:'h-100 obj-c',
+							alt: 'Детали интерьера',
+							width: '360',
+							height: '410',
+							imgPath: 'index/interior/furniture.jpg',
+						})
+				.swiper-slide.interior__swiper-slide
+					a(href='img/index/interior/hookah.jpg' data-lightbox='roadtrip' data-title='Наши кальяны')
+						+webp({
+								pictureClas: 'interior__img',
+								imgClass:'h-100 obj-c',
+								alt: 'Кальяны',
+								width: '360',
+								height: '410',
+								imgPath: 'index/interior/hookah.jpg',
+							})

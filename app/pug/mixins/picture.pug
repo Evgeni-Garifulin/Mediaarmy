@@ -1,0 +1,26 @@
+mixin webp (params)
+	-
+		const opts = {
+			pictureClass: (params.pictureClass) ? params.pictureClass : '',
+			imgClass: (params.imgClass) ? params.imgClass : '',
+			alt: (params.alt) ? params.alt : '',
+			height: (params.height) ? params.height : '',
+			width: (params.width) ? params.width : '',
+			imgPath: (params.imgPath) ? params.imgPath.split('.').slice(0, -1).join('.') : '',
+			imgPath: (params.imgPath) ? params.imgPath : '',
+			}
+
+			const imgPathWebp = opts.imgPath.split('.').slice(0, -1).join('.');
+
+
+	picture(class=opts.pictureClass)
+		source(srcset=`img/webp/${imgPathWebp}.webp` type='image/webp')
+		source(srcset=`img/${opts.imgPath}` type='image/jpeg')
+		img(
+			src= `img/${opts.imgPath}`
+			class= opts.imgClass
+			width= opts.width
+			height= opts.height
+			alt= opts.alt
+			loading= 'lazy'
+	)

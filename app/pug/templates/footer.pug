@@ -4,7 +4,14 @@ include ../mixins/picture
 footer#footer.footer
 	.row.g-0.footer__inner
 		div(class='col-12 lg:col-7 footer__bg')
-			+picture-w100p('footer__bg-img', 'footer/plan', 'Карта', '615', '1000')
+			+webp({
+				pictureClas: 'footer__bg-img',
+				imgClass:'w-100p obj-c',
+				alt: 'Карта',
+				width: '1000',
+				height: '615',
+				imgPath: 'index/footer/plan.jpg',
+			})
 			img.footer__bg-icon(src='img/index/footer/mark.svg' width='45' height='65' alt='Отметка на карте')
 		div(class='col-12 order-first lg:order-2 lg:col-5 footer__bg-side--description')
 			.footer__content
@@ -12,24 +19,24 @@ footer#footer.footer
 					h2.footer__content-title Контакты
 					.footer__content-columns
 						.footer__content-column
-							+svg('footer__content-column-icon', '18', '21', 'Телефон', 'phone')
+							+svg('phone', '19', '21', 'footer__content-column-icon', 'Телефон')
 							a.footer__content-column-link(href='tel:+73432989888') +7 (343) 298-98-88
 						.footer__content-column
-							+svg('footer__content-column-icon', '18', '21', 'Адрес', 'point')
+							+svg('point', '18', '21', 'footer__content-column-icon', 'Адрес')
 							p.footer__content-column-text Екатеринбург, ул. Малышева&nbsp;51,
 								br
 								| БЦ&nbsp;Высоцкий, 50&nbsp;этаж
 						.footer__content-column
-							+svg('footer__content-column-icon', '18', '21', 'Рабочее время', 'clock')
+							+svg('clock', '18', '21', 'footer__content-column-icon', 'Рабочее время')
 							p.footer__content-column-text вс-чт с&nbsp;16:00 до&nbsp;00:00
 								br
 								| пт-сб с&nbsp;16:00 до&nbsp;04:00
 					.footer__content-buttons
 						button.footer__content-button(type='button')
-							+svg('footer__content-button-icon', '12', '26', 'Facebook', 'fb')
+							+svg('fb', '12', '26', 'footer__content-button-icon',  'Facebook')
 							span Facebook
 						button.footer__content-button(type='button')
-							+svg('footer__content-button-icon', '21', '22', 'Instagram', 'insta')
+							+svg('insta', '21', '22', 'footer__content-button-icon', 'Instagram')
 							span Instagram
 					.footer__content-img
 						img.max-w-100p.footer__content-icon(src='img/index/footer/lighter.svg' width='100' height='105' alt='Зажигалка')

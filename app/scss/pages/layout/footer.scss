@@ -11,6 +11,10 @@
 
 
 	&__bg-icon {
+		@include media-breakpoint-down(lg) {
+			top: 55%;
+		}
+
 		position: absolute;
 		top: 42%;
 		left: 46%;

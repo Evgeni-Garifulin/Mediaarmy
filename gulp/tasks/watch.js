@@ -9,6 +9,9 @@ const buildJs = require('./scripts');
 const buildFonts = require('./scripts');
 const buildPug = require('./pug');
 const buildHtml = require('./html');
+const buildLibs = require('./libs');
+const buildFavicons = require('./favicons');
+
 
 const config = require('../config');
 const browserSyncReload = require('./server').browserSyncReload;
@@ -24,5 +27,7 @@ module.exports = watch = (done) => {
 	gulp.watch(config.watch.webp, gulp.series(buildWebp, browserSyncReload));
 	gulp.watch(config.watch.svg, gulp.series(buildSvgSprite, browserSyncReload));
 	gulp.watch(config.watch.fonts, gulp.series(buildFonts, browserSyncReload));
+	gulp.watch(config.watch.libs, gulp.series(buildLibs, browserSyncReload));
+	gulp.watch(config.watch.favicon, gulp.series(buildFavicons, browserSyncReload));
 	done();
 };
